@@ -1,0 +1,5 @@
+@import "../../../features/common/scss";
+
+.hamburgerButton {
+  @include resetButton;
+}

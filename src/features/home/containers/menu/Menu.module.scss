@@ -1,0 +1,17 @@
+@import "../../../common/scss";
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  padding: 24px 16px;
+  text-align: left;
+  @include desktop {
+    & {
+      padding: 32px 42px;
+    }
+  }
+}
+
+.mobileMenuIcon {
+  margin-left: auto;
+}
