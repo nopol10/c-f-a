@@ -1,0 +1,42 @@
+@import "../../common/scss";
+
+.mainItem {
+  @include resetButton;
+  margin-right: 16px;
+  transform: rotateZ(0);
+  transition: transform 300ms;
+  margin-bottom: 0;
+  transition: margin-bottom 300ms;
+  .expanded & {
+    margin-bottom: 32px;
+  }
+}
+
+// This margin overrides MenuItems' margin and is here to match the design
+ul li.expanded {
+  margin-bottom: 10px;
+}
+
+.expandIcon {
+  transform: rotateZ(0);
+  transition: transform 300ms;
+
+  .expanded & {
+    transform: rotateZ(180deg);
+  }
+}
+
+.subMenu {
+  margin-left: 24px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 300ms;
+
+  .expanded & {
+    max-height: 50vh;
+  }
+
+  li {
+    margin-bottom: 22px;
+  }
+}
