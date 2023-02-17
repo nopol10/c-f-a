@@ -5,6 +5,12 @@
   flex-direction: row;
   padding: 24px 16px;
   text-align: left;
+
+  li a {
+    text-decoration: none;
+    color: var(--color-medium-gray);
+  }
+
   @include desktop {
     & {
       padding: 32px 42px;
@@ -14,4 +20,21 @@
 
 .mobileMenuIcon {
   margin-left: auto;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  @include desktop {
+    display: none;
+  }
+}
+
+.desktopMenu {
+  display: none;
+  @include desktop {
+    display: block;
+  }
 }

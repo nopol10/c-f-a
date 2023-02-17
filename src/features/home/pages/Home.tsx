@@ -1,18 +1,30 @@
 import { LinkButton } from "../../common/components/LinkButton";
 import { CLIENTS } from "../constants/clients";
 import { Menu } from "../containers/menu/Menu";
+import { MenuItems } from "../containers/menu/MenuItems";
 import styles from "./Home.module.scss";
 
-function ClientLogos() {
+export function Home() {
   return (
-    <div className={styles.clientLogos}>
-      {CLIENTS.map(({ name, logo }) => {
-        return (
-          <div>
-            <img src={logo} alt={name} key={name} />
-          </div>
-        );
-      })}
+    <div className={styles.home}>
+      <header>
+        <Menu>
+          <MenuItems />
+          <LinkButton href="#" variant="link">
+            Login
+          </LinkButton>
+          <LinkButton
+            href="#"
+            variant="outline"
+            className={styles.registerButton}
+          >
+            Register
+          </LinkButton>
+        </Menu>
+      </header>
+      <main>
+        <Body />
+      </main>
     </div>
   );
 }
@@ -43,15 +55,16 @@ function Body() {
   );
 }
 
-export function Home() {
+function ClientLogos() {
   return (
-    <div className={styles.home}>
-      <header>
-        <Menu></Menu>
-      </header>
-      <main>
-        <Body />
-      </main>
+    <div className={styles.clientLogos}>
+      {CLIENTS.map(({ name, logo }) => {
+        return (
+          <div>
+            <img src={logo} alt={name} key={name} />
+          </div>
+        );
+      })}
     </div>
   );
 }
