@@ -1,0 +1,10 @@
+@import "../scss";
+
+.navbar {
+  padding: 2px 0;
+  width: 100%;
+
+  @include desktop {
+    font-size: 14px;
+  }
+}
