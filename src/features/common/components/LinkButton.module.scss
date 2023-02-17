@@ -7,10 +7,23 @@
   color: white;
   border-radius: 14px;
   text-decoration: none;
+  text-align: center;
 
   @include desktop {
     & {
       padding: 20px 30px;
     }
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border: 1px solid var(--color-almost-black);
+    color: var(--color-almost-black);
+  }
+
+  &.link {
+    background-color: transparent;
+    border: none;
+    color: var(--color-almost-black);
   }
 }
