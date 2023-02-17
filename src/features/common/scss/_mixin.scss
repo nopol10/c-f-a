@@ -5,3 +5,11 @@ $desktop-width: 1440px;
     @content;
   }
 }
+
+@mixin resetButton {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+}
