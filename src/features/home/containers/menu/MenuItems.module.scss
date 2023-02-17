@@ -1,0 +1,8 @@
+@import "../../../common/scss";
+
+.list {
+  & > li {
+    margin-bottom: 26px;
+    transition: margin-bottom 300ms;
+  }
+}
