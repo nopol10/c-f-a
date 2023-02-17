@@ -1,29 +1,50 @@
 @import "../scss";
 
+$button-inactive: rgb(160, 160, 160);
+
 .button {
   display: inline-block;
-  padding: 16px 22px;
+  padding: 15px 22px;
   background-color: var(--color-almost-black);
   color: white;
+  border: 1px solid var(--color-almost-black);
   border-radius: 14px;
   text-decoration: none;
   text-align: center;
 
-  @include desktop {
-    & {
-      padding: 20px 30px;
-    }
-  }
-
-  &.outlined {
+  &:not(.link):not(.outlined):hover {
     background-color: transparent;
     border: 1px solid var(--color-almost-black);
     color: var(--color-almost-black);
   }
 
-  &.link {
+  &.outlined,
+  &:hover.outlined {
+    background-color: transparent;
+    border: 2px solid var(--color-almost-black);
+    color: var(--color-almost-black);
+  }
+
+  &.link,
+  &:hover.link {
     background-color: transparent;
     border: none;
     color: var(--color-almost-black);
+    font-size: 14px;
+  }
+
+  @include desktop {
+    & {
+      padding: 20px 30px;
+    }
+
+    &.outlined {
+      border: 2px solid $button-inactive;
+      color: var(--color-medium-gray);
+    }
+
+    &.link {
+      color: var(--color-medium-gray);
+    }
   }
 }

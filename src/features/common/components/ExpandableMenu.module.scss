@@ -1,28 +1,74 @@
 @import "../../common/scss";
 
+@mixin expandedMenu {
+  max-height: 50vh;
+}
+
+@mixin expandedIndicator {
+  transform: rotateZ(180deg);
+}
+
+.expandableMenu {
+  position: relative;
+  @include desktop {
+    height: 100%;
+    &:hover {
+      .mainItem {
+        color: var(--color-almost-black);
+      }
+      .expandIcon {
+        @include expandedIndicator;
+      }
+      .subMenu {
+        @include expandedMenu;
+        opacity: 1;
+      }
+    }
+  }
+}
+
 .mainItem {
   @include resetButton;
-  margin-right: 16px;
   transform: rotateZ(0);
   transition: transform 300ms;
   margin-bottom: 0;
   transition: margin-bottom 300ms;
+
+  .expandIcon {
+    margin-left: 12px;
+    transform: rotateZ(0);
+    transition: transform 300ms;
+
+    .expanded & {
+      @include expandedIndicator;
+    }
+
+    @include desktop {
+      margin-left: 4px;
+    }
+  }
+
   .expanded & {
     margin-bottom: 32px;
+
+    @include desktop {
+      margin-bottom: inherit;
+    }
+  }
+
+  @include desktop {
+    font-size: 14px;
+    color: var(--color-link-inactive);
   }
 }
 
 // This margin overrides MenuItems' margin and is here to match the design
 ul li.expanded {
   margin-bottom: 10px;
-}
 
-.expandIcon {
-  transform: rotateZ(0);
-  transition: transform 300ms;
-
-  .expanded & {
-    transform: rotateZ(180deg);
+  @include desktop {
+    transition: none;
+    margin-bottom: inherit;
   }
 }
 
@@ -30,13 +76,37 @@ ul li.expanded {
   margin-left: 24px;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 300ms;
+  transition: max-height 300ms, opacity 300ms;
 
   .expanded & {
-    max-height: 50vh;
+    @include expandedMenu;
   }
 
   li {
     margin-bottom: 22px;
+
+    @include desktop {
+      margin-bottom: 16px;
+    }
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 36px;
+    margin: 0;
+    padding: 22px 24px;
+    background-color: white;
+    box-shadow: hsla(0, 0%, 41%, 0.3) 0 0 48px 0;
+    border-radius: 8px;
+    transform: translateX(-50%);
+    opacity: 0;
+
+    &.right {
+      transform: translateX(0%);
+    }
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
   }
 }

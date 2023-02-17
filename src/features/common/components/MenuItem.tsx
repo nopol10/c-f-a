@@ -18,7 +18,7 @@ export function MenuItem({
   return (
     <li className={classname(styles.menuItem)}>
       {iconUrl && <img className={styles.icon} src={iconUrl} alt={label}></img>}
-      <a href={href} className={classname(styles.mainItem, className)}>
+      <a href={href} className={classname(className)}>
         {label}
         {children}
       </a>

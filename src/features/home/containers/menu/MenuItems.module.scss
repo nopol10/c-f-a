@@ -5,4 +5,11 @@
     margin-bottom: 26px;
     transition: margin-bottom 300ms;
   }
+
+  @include desktop {
+    display: flex;
+    align-items: flex-start;
+    gap: 39px;
+    padding-top: 12px;
+  }
 }

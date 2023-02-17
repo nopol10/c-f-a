@@ -140,6 +140,7 @@ body {
   --color-almost-white: hsl(0, 0%, 98%);
   --color-medium-gray: hsl(0, 0%, 41%);
   --color-almost-black: hsl(0, 0%, 8%);
+  --color-link-inactive: rgb(140, 140, 140);
 
   @include desktop {
     & {

@@ -3,10 +3,24 @@
 .menuItem {
   display: flex;
   align-items: center;
+  a {
+    white-space: nowrap;
+
+    &:hover {
+      color: var(--color-almost-black);
+      font-weight: 500;
+    }
+  }
 }
 
 .icon {
-  width: 18px;
-  height: auto;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
   margin-right: 16px;
+
+  @include desktop {
+    width: 16px;
+    height: 16px;
+  }
 }

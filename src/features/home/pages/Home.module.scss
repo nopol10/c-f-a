@@ -2,6 +2,9 @@
 
 .home {
   background-color: white;
+  @include desktop {
+    background-color: var(--color-almost-white);
+  }
 }
 
 .body {
@@ -13,7 +16,7 @@
 
   @include desktop {
     flex-direction: row-reverse;
-    padding: 40px 130px;
+    padding: 32px 130px 32px 113px;
   }
 
   .heroImage {
@@ -44,7 +47,7 @@
 
     @include desktop {
       gap: 48px;
-      padding: 103px 150px 100px 35px;
+      padding: 103px 136px 100px 52px;
       align-items: start;
       text-align: left;
     }
@@ -56,7 +59,7 @@
     margin-bottom: 25px;
 
     @include desktop {
-      padding-right: 32px;
+      padding-right: 46px;
       margin-bottom: 0;
     }
   }

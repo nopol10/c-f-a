@@ -7,21 +7,24 @@ import styles from "./Home.module.scss";
 export function Home() {
   return (
     <div className={styles.home}>
-      <header>
-        <Menu>
-          <MenuItems />
-          <LinkButton href="#" variant="link">
-            Login
-          </LinkButton>
-          <LinkButton
-            href="#"
-            variant="outline"
-            className={styles.registerButton}
-          >
-            Register
-          </LinkButton>
-        </Menu>
-      </header>
+      <Menu
+        rightItems={
+          <>
+            <LinkButton href="#" variant="link">
+              Login
+            </LinkButton>
+            <LinkButton
+              href="#"
+              variant="outline"
+              className={styles.registerButton}
+            >
+              Register
+            </LinkButton>
+          </>
+        }
+      >
+        <MenuItems />
+      </Menu>
       <main>
         <Body />
       </main>
@@ -57,11 +60,11 @@ function Body() {
 
 function ClientLogos() {
   return (
-    <div className={styles.clientLogos}>
+    <div aria-label="client logos" className={styles.clientLogos}>
       {CLIENTS.map(({ name, logo }) => {
         return (
-          <div>
-            <img src={logo} alt={name} key={name} />
+          <div key={name}>
+            <img src={logo} alt={name} />
           </div>
         );
       })}

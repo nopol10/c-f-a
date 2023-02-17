@@ -1,20 +1,39 @@
 @import "../../../common/scss";
 
 .menu {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: row;
   padding: 24px 16px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: left;
+  background-color: white;
 
   li a {
     text-decoration: none;
     color: var(--color-medium-gray);
+
+    @include desktop {
+      color: var(--color-link-inactive);
+    }
   }
 
   @include desktop {
     & {
-      padding: 32px 42px;
+      padding: 20px 40px 22px 42px;
+      background-color: var(--color-almost-white);
     }
+  }
+}
+
+.snapLogo {
+  height: fit-content;
+  @include desktop {
+    padding-top: 12px;
+    margin-right: 61px;
   }
 }
 
@@ -26,6 +45,12 @@
   }
 }
 
+.navWrapper {
+  @include desktop {
+    width: 100%;
+  }
+}
+
 .mobileMenu {
   @include desktop {
     display: none;
@@ -34,7 +59,18 @@
 
 .desktopMenu {
   display: none;
+
   @include desktop {
-    display: block;
+    display: flex;
+  }
+
+  .rightItems {
+    display: flex;
+    align-items: flex-start;
+    margin-left: auto;
+    gap: 22px;
+    a {
+      padding: 12px 21px;
+    }
   }
 }

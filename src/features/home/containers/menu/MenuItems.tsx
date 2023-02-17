@@ -29,7 +29,7 @@ export function MenuItems() {
           label="Planning"
         ></MenuItem>
       </ExpandableMenu>
-      <ExpandableMenu title="Company">
+      <ExpandableMenu title="Company" popupAlignment="right">
         <MenuItem href="#" label="History"></MenuItem>
         <MenuItem href="#" label="Our Team"></MenuItem>
         <MenuItem href="#" label="Blog"></MenuItem>

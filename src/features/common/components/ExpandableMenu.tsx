@@ -4,13 +4,13 @@ import styles from "./ExpandableMenu.module.scss";
 
 export type ExpandableMenuProps = React.PropsWithChildren<{
   title: string;
+  popupAlignment?: "left" | "right";
   className?: string;
-  onClick?: () => void;
 }>;
 
 export function ExpandableMenu({
   title,
-  onClick,
+  popupAlignment = "left",
   children,
 }: ExpandableMenuProps) {
   const [expanded, setExpanded] = useState(false);
@@ -24,17 +24,17 @@ export function ExpandableMenu({
         expanded ? styles.expanded : undefined
       )}
     >
-      <div>
-        <button onClick={handleToggleExpandMenu} className={styles.mainItem}>
-          {title}
-        </button>
+      <button className={styles.mainItem} onClick={handleToggleExpandMenu}>
+        {title}{" "}
         <img
           className={styles.expandIcon}
           src={"/icon-arrow-down.svg"}
           alt={expanded ? "collapse submenu" : "expand submenu"}
         ></img>
-      </div>
-      <ul className={styles.subMenu}>{children}</ul>
+      </button>
+      <ul className={classname(styles.subMenu, styles[popupAlignment])}>
+        {children}
+      </ul>
     </li>
   );
 }
