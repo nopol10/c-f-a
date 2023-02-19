@@ -1,4 +1,5 @@
 import { LinkButton } from "../../common/components/LinkButton";
+import { getImageUrl } from "../../common/utils/get-image-url";
 import { CLIENTS } from "../constants/clients";
 import { Menu } from "../containers/menu/Menu";
 import { MenuItems } from "../containers/menu/MenuItems";
@@ -36,9 +37,12 @@ function Body() {
   return (
     <div className={styles.body}>
       <picture>
-        <source media="(min-width:1440px)" srcSet="/image-hero-desktop.png" />
+        <source
+          media="(min-width:1440px)"
+          srcSet={getImageUrl("/image-hero-desktop.png")}
+        />
         <img
-          src="/image-hero-mobile.png"
+          src={getImageUrl("/image-hero-mobile.png")}
           alt="hero"
           className={styles.heroImage}
         />

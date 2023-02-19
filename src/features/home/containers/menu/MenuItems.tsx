@@ -1,5 +1,6 @@
 import { ExpandableMenu } from "../../../common/components/ExpandableMenu";
 import { MenuItem } from "../../../common/components/MenuItem";
+import { getImageUrl } from "../../../common/utils/get-image-url";
 import styles from "./MenuItems.module.scss";
 
 export type MenuItemsProps = React.PropsWithChildren<{}>;
@@ -10,22 +11,22 @@ export function MenuItems() {
       <ExpandableMenu title="Features">
         <MenuItem
           href="#"
-          iconUrl="/icon-todo.svg"
+          iconUrl={getImageUrl("/icon-todo.svg")}
           label="Todo List"
         ></MenuItem>
         <MenuItem
           href="#"
-          iconUrl="/icon-calendar.svg"
+          iconUrl={getImageUrl("/icon-calendar.svg")}
           label="Calendar"
         ></MenuItem>
         <MenuItem
           href="#"
-          iconUrl="/icon-reminders.svg"
+          iconUrl={getImageUrl("/icon-reminders.svg")}
           label="Reminders"
         ></MenuItem>
         <MenuItem
           href="#"
-          iconUrl="/icon-planning.svg"
+          iconUrl={getImageUrl("/icon-planning.svg")}
           label="Planning"
         ></MenuItem>
       </ExpandableMenu>

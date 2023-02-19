@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import { classname } from "../../common/utils/classname";
+import { getImageUrl } from "../utils/get-image-url";
 import styles from "./ExpandableMenu.module.scss";
 
 export type ExpandableMenuProps = React.PropsWithChildren<{
@@ -28,7 +29,7 @@ export function ExpandableMenu({
         {title}{" "}
         <img
           className={styles.expandIcon}
-          src={"/icon-arrow-down.svg"}
+          src={getImageUrl("/icon-arrow-down.svg")}
           alt={expanded ? "collapse submenu" : "expand submenu"}
         ></img>
       </button>

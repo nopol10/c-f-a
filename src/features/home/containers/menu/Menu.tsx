@@ -1,6 +1,7 @@
 import { ReactNode, useCallback, useState } from "react";
 import { Drawer } from "../../../common/components/Drawer";
 import { Navbar } from "../../../common/components/Navbar";
+import { getImageUrl } from "../../../common/utils/get-image-url";
 import { HamburgerMenuButton } from "../../components/HamburgerMenuButton";
 import styles from "./Menu.module.scss";
 
@@ -19,7 +20,11 @@ export function Menu({ rightItems, children }: MenuProps) {
 
   return (
     <header className={styles.menu}>
-      <img src={"/logo.svg"} alt="snap logo" className={styles.snapLogo} />
+      <img
+        src={getImageUrl("/logo.svg")}
+        alt="snap logo"
+        className={styles.snapLogo}
+      />
       <HamburgerMenuButton
         onClick={handleOpenMobileMenu}
         className={styles.mobileMenuIcon}

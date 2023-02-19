@@ -1,5 +1,6 @@
 import styles from "./HamburgerMenuButton.module.scss";
 import { classname } from "../../common/utils/classname";
+import { getImageUrl } from "../../common/utils/get-image-url";
 
 export type HamburgerMenuButtonProps = {
   onClick: () => void;
@@ -15,7 +16,7 @@ export function HamburgerMenuButton({
       className={classname(styles.hamburgerButton, className)}
       onClick={onClick}
     >
-      <img src={"/icon-menu.svg"} alt="menu button" />
+      <img src={getImageUrl("/icon-menu.svg")} alt="menu button" />
     </button>
   );
 }
