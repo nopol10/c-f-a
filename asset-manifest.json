@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "https://nopol10.github.io/c-f-a/static/css/main.46d98424.css",
-    "main.js": "https://nopol10.github.io/c-f-a/static/js/main.8de9bb16.js",
+    "main.css": "https://nopol10.github.io/c-f-a/static/css/main.0a965370.css",
+    "main.js": "https://nopol10.github.io/c-f-a/static/js/main.7f6e39a1.js",
     "static/js/787.4aee1384.chunk.js": "https://nopol10.github.io/c-f-a/static/js/787.4aee1384.chunk.js",
     "index.html": "https://nopol10.github.io/c-f-a/index.html",
     "static/media/icon-close-menu.svg": "https://nopol10.github.io/c-f-a/static/media/icon-close-menu.3f33fd68b142340b7eb8.svg",
-    "main.46d98424.css.map": "https://nopol10.github.io/c-f-a/static/css/main.46d98424.css.map",
-    "main.8de9bb16.js.map": "https://nopol10.github.io/c-f-a/static/js/main.8de9bb16.js.map",
+    "main.0a965370.css.map": "https://nopol10.github.io/c-f-a/static/css/main.0a965370.css.map",
+    "main.7f6e39a1.js.map": "https://nopol10.github.io/c-f-a/static/js/main.7f6e39a1.js.map",
     "787.4aee1384.chunk.js.map": "https://nopol10.github.io/c-f-a/static/js/787.4aee1384.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46d98424.css",
-    "static/js/main.8de9bb16.js"
+    "static/css/main.0a965370.css",
+    "static/js/main.7f6e39a1.js"
   ]
 }
